@@ -1,0 +1,45 @@
+<html>
+<head> <title> Form Fill-Out </title>
+
+
+ </head>
+ 
+<body style="background-color:#CC99FF">
+
+<h3 style="font-family:verdana; color:white">Please, fill out the following Form!</h3>
+
+<center>
+<form action="login.php" name = "GuestForm" onsubmit="return validateForm()" method="post">
+*Guest's Name:<br>
+<input type="text" name="name" style="margin-left:10px">
+<br><br>
+*Login name:<br>
+<input type="text" name="loginame" style="margin-left:10px">
+<br><br>
+*Email:<br>
+<input type="text" name="email" style="margin-left:10px">
+<br><br>
+*Message: <br>
+<input type="text" name="msg" style="margin-left:10px">
+<br><br><br>
+<input type="submit" value="Submit">
+</form>
+</center>
+
+	<!--Form Validation Script !-->
+	<script>
+	function validateForm() {
+		var guest_name = document.forms["GuestForm"]["name"].value;
+		var login_name = document.forms["GuestForm"]["loginame"].value;
+		var email = document.forms["GuestForm"]["email"].value;
+		var message = document.forms["GuestForm"]["msg"].value;
+		
+		if (guest_name == null || login_name == null || email == null || message == null) {
+			alert("Missing Required Fields");
+			return false;}	
+		}
+	</script>
+						
+	</body>					
+						
+</html>
